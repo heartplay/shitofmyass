@@ -1,29 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+SC:wght@400;500&family=Jersey+15&family=Poiret+One&display=swap');
 body {
     margin: 0;
-    background-color: #2d8c5b;
+    /* background-color: #2d8c5b; */
+    background-color: black;
     text-align: center;
-    font: normal 20px 'Poiret One', sans-serif;
+    /* font: normal 20px 'Poiret One', sans-serif; */
+    /* color: #8EFE17; */
     color: #8EFE17;
 }
 
-body h1 {
+/* body h1 {
     margin-top: 0;
     margin-bottom: 10px;
+} */
+
+/* body h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+} */
+
+/* body p {
+    margin-top: 0;
+    margin-bottom: 10px;
+} */
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #23D237;
 }
 
-body h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.header-inner {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 1024px;
+    height: 100%;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    /* font-size: 24px; */
+    /* color: #34164E; */
 }
 
-body p {
-    margin-top: 0;
-    margin-bottom: 10px;
+.header-inner-left {
+    /* display: flex; */
+    /* align-items: center; */
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    /* margin: auto; */
+    /* border: 1px solid red; */
+    /* font-size: 14px; */
+}
+
+.logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    /* letter-spacing: 3.8px; */
+    /* color: #34164E; */
+    color: black;
+}
+
+#avatar-logo {
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+/* .logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    
+} */
+
+.header-inner-right {
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 
 .navigation {
+    display: flex;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 100%;
+}
+
+.navigation > div {
+    display: flex;
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.navigation > div:hover {
+    border-bottom: 8px solid blue;
+    box-shadow: 0px 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+#current-page {
+    border-bottom: 8px solid blue;
+}
+
+/* .navigation {
     position: sticky;
+    float: left;
     display: inline;
     top: 0;
     width: 100%;
@@ -34,9 +139,9 @@ body p {
     font-size: 18px;
     font-weight: bold;
     color: #34164E;
-} 
+}  */
 
-.navigation > div {
+/* .navigation > div {
     float: left;
     height: 50px;
     width: 25%;
@@ -44,13 +149,36 @@ body p {
     box-sizing: border-box;
     text-align: center;
     border: 1px solid #2d8c5b;
-}
+} */
+
+/* .header-inner {
+    display: block;
+    position: fixed;
+    width: 100%;
+    position: sticky;
+    height: 50px;
+} */
 
 .outer {
     max-width: 750px;
     margin: auto;
     text-align: center;
     
+}
+
+.outer h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.outer h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.outer p {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .inner {
@@ -65,7 +193,33 @@ body p {
     padding-right: 15px;
     background-color: #23D237;
     text-align: center;
+    /* text-align: justify; */   /* книжное выравнивание текста
     font-size: 18px;
     font-weight: bold;
-    color: #34164E;
+    /* color: #34164E; */
+    color: black;
 }
+
+.inner h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.inner h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.inner p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#main-page {
+    margin-top: 30px;
+}
+
+#calculator-page {
+    margin-top: 30px;
+}
+  
