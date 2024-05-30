@@ -1,49 +1,49 @@
 .calculator {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .calculator h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .calculator p {
-    margin-top: 0;
-    margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .calc > {
-    display: inline;
-    position: relative;
+  display: inline;
+  position: relative;
 }
 
 .buttons {
-    display: inline-block;
-    border: 1px solid red;
+  display: inline-block;
+  border: 1px solid red;
 }
 
 .buttons button {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    outline: none;
-    border: 1px solid;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: rgb(93, 229, 85);
-    border: 1px solid red;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(93, 229, 85);
+  border: 1px solid red;
 }
 
 .buttons button:hover {
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
 }
 
 .result {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 #result {
-    border: 1px solid red;
+  border: 1px solid red;
 }

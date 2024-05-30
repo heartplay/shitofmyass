@@ -11,10 +11,10 @@ let action = '+' // сложение по умолчанию
 
 plusBtn.onclick = function () {  // присвоение кнопкам символа операции
     action = '+'
-} 
+}
 minusBtn.onclick = function () {
     action = '-'
-} 
+}
 
 umnojenieBtn.onclick = function () {
     action = '*'
@@ -24,7 +24,7 @@ delenieBtn.onclick = function () {
     action = '/'
 }
 
-function printResult (result) { // функция вывода результата
+function printResult(result) { // функция вывода результата
     if (result < 0) {
         resultElement.style.color = 'red'
     }
@@ -41,12 +41,12 @@ function computeNumbersWithAction(inp1, inp2, actionSymbol) { // функция 
         return num1 + num2
     }
     if (actionSymbol == '-') {
-        return num1 - num2 
+        return num1 - num2
     }
     if (actionSymbol == '*') {
-        return num1 * num2 
+        return num1 * num2
     }
-    if (actionSymbol == '/' ) {
+    if (actionSymbol == '/') {
         if (num2 == 0) {
             alert('На ноль делить нельзя! По крайней мере, так говорили в школе...')
         }
