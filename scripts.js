@@ -5,7 +5,7 @@ const titleTag = document.getElementById('title')
 // const titleTag = document.querySelector('head title')
 
 function headerRender() {
-  headerInner.insertAdjacentHTML('beforeend', `<div class="header-inner-left">
+  headerInner.insertAdjacentHTML('afterbegin', `<div class="header-inner-left">
   <div class="logo">
     <img src="main-page-avatar.jpg" alt=":(" id="avatar-logo"/> 
     GLEB FEDOSEEV
