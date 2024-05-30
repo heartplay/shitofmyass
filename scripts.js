@@ -25,7 +25,6 @@ window.onload = () => {
   headerRender();
 };
 
-console.log(titleTag.textContent)
 
 
 
