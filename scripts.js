@@ -1,7 +1,7 @@
 const headerInner = document.getElementById('header-inner')
-const currentPage = document.getElementById('current-page')
+const currentPage = document.getElementById('title')
 const pageIndex = parseInt(currentPage.dataset.index)
-const titleTag = document.getElementById('title')
+// const titleTag = document.getElementById('title')
 // const titleTag = document.querySelector('head title')
 
 function headerRender() {
@@ -13,10 +13,10 @@ function headerRender() {
 </div>
 <div class="header-inner-right">
   <div class="navigation">
-    <div class="navigation-btn${pageIndex === 1 ? '-current-page' : ''}"><a href="index.html">На главную</a></div>
-    <div class="navigation-btn${pageIndex === 2 ? '-current-page' : ''}"><a href="calculator.html">Калькулятор</a></div>
-    <div class="navigation-btn${pageIndex === 3 ? '-current-page' : ''}">Page 3</div>
-    <div class="navigation-btn${pageIndex === 4 ? '-current-page' : ''}">Page 4</div>
+    <div class="navigation-btn"><a href="index.html" class="navigation-link${pageIndex === 1 ? '-current-page' : ''}">На главную</a></div>
+    <div class="navigation-btn"><a href="calculator.html" class="navigation-link${pageIndex === 2 ? '-current-page' : ''}">Калькулятор</a></div>
+    <div class="navigation-btn"><a href="template1.html" class="navigation-link${pageIndex === 3 ? '-current-page' : ''}">Template 1</a></div>
+    <div class="navigation-btn"><a href="template2.html" class="navigation-link${pageIndex === 4 ? '-current-page' : ''}">Template 2</a></div>
   </div>
 </div>`);
 }
@@ -24,6 +24,7 @@ function headerRender() {
 window.onload = () => {
   headerRender();
 };
+
 
 
 
