@@ -3,16 +3,10 @@ const inputElement = document.getElementById('notes-input')
 const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
 
-const notes = [
-    {
-    title: 'записать блок про массивы',
-    completed: false,
-    }, 
-    {
-    title: 'рассказать теорию объектов',
-    completed: true,
-    }
-]
+const notes = JSON.parse(localStorage.getItem('notes')) === null
+? []
+: JSON.parse(localStorage.getItem('notes'))
+//localStorage
 
 function render() {
     listElement.innerHTML = ''
@@ -23,7 +17,6 @@ function render() {
         listElement.insertAdjacentHTML('beforeend', getNoteTemplate(notes[i], i))
     }
 }
-
 
 render()
 
@@ -36,6 +29,14 @@ createBtn.onclick = function () {
         completed: false,
     }
     notes.push(newNote)
+    console.log(notes)
+    localStorage.setItem("notes", JSON.stringify(notes));
+    // for (let note in notes) {
+    //     // localStorage.setItem(`${note}note`, JSON.stringify(notes[note]))
+        
+        
+    // }
+    
     render()
     
     inputElement.value = ''
@@ -48,8 +49,9 @@ listElement.onclick = function (event) {
             notes[index].completed= !notes[index].completed
         } else if (type === 'remove') {
             notes.splice(index, 1)
+            
         }
-
+        localStorage.setItem("notes", JSON.stringify(notes));
         render()
     }
 }

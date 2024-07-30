@@ -178,6 +178,7 @@ header {
   margin-bottom: 30px;
 }
 
+
 /* =================== Старые стили */
 
 /* .navigation a {
@@ -209,3 +210,12 @@ header {
 .head {
   border: 1px solid red;
 } */
+
+/* html {
+  transform: scaleX(-1);
+} */
+
+/* html {
+  transform: skewY(10deg) skewX(5deg);
+  transform: ;
+}  */
