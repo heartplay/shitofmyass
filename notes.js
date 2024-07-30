@@ -4,9 +4,9 @@ const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
 
 const notes = JSON.parse(localStorage.getItem('notes')) === null
-? []
-: JSON.parse(localStorage.getItem('notes'))
-//localStorage
+    ? []
+    : JSON.parse(localStorage.getItem('notes'))
+//Получение заметок из localStorage, если заметок нет, создает пустой массив заметок
 
 function render() {
     listElement.innerHTML = ''
@@ -31,14 +31,7 @@ createBtn.onclick = function () {
     notes.push(newNote)
     console.log(notes)
     localStorage.setItem("notes", JSON.stringify(notes));
-    // for (let note in notes) {
-    //     // localStorage.setItem(`${note}note`, JSON.stringify(notes[note]))
-        
-        
-    // }
-    
     render()
-    
     inputElement.value = ''
 }
 listElement.onclick = function (event) {
@@ -46,28 +39,36 @@ listElement.onclick = function (event) {
         const index = parseInt(event.target.dataset.index)
         const type = event.target.dataset.type
         if (type === 'toggle') {
-            notes[index].completed= !notes[index].completed
+            notes[index].completed = !notes[index].completed
         } else if (type === 'remove') {
             notes.splice(index, 1)
-            
         }
-        localStorage.setItem("notes", JSON.stringify(notes));
+        localStorage.setItem("notes", JSON.stringify(notes)); 
+        // Записывает заметку в localStorage
         render()
     }
 }
 
+// function getNoteTemplate(note, index) {
+//     return ` 
+//     <li class="note">
+//     <span class="${note.completed ? 'complete' : ''}">${note.title}</span>
+//     <span>
+//     <span class="${note.completed ? 'warning' : 'success'}" data-index="${index}" data-type="toggle">&check;</span>
+//     <span class="remove" data-index="${index}" data-type="remove">&times;</span>
+//     </span>
+// </li>
+// `
+// }
 
 function getNoteTemplate(note, index) {
     return ` 
-    <li
-    class="list-group-item d-flex justify-content-between align-items-center">
-    <span class="${note.completed ? 'text-decoration-line-through' : ''}">${note.title}</span>
-    <span>
-    <span class="btn btn-small btn-${
-        note.completed ? 'warning' : 'success'
-    }" data-index="${index}" data-type="toggle">&check;</span>
-    <span class="btn btn-small btn-danger" data-index="${index}" data-type="remove">&times;</span>
-    </span>
+    <li class="note">
+    <div class="${note.completed ? 'complete' : ''}">${note.title}</div>
+    <div class="buttons">
+    <div class="${note.completed ? 'warning' : 'success'}" data-index="${index}" data-type="toggle">&check;</div>
+    <div class="remove" data-index="${index}" data-type="remove">&times;</div>
+    </div>
 </li>
 `
 }

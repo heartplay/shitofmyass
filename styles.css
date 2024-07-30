@@ -81,7 +81,8 @@ header {
 .navigation-btn {
   display: flex;
   box-sizing: border-box;
-  width: 25%;
+  /* width: 25%; */
+  width: 33%;
   height: 100%;
   text-align: center;
   justify-content: center;
@@ -178,6 +179,14 @@ header {
   margin-bottom: 30px;
 }
 
+input {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
 /* =================== Старые стили */
 
@@ -218,4 +227,23 @@ header {
 /* html {
   transform: skewY(10deg) skewX(5deg);
   transform: ;
+}  */
+
+/* @media (max-width: 500px) {
+  input {
+    height: 5dvh;
+  }
+} */
+
+/* html {
+  animation: rotation 50s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  to {
+    transform: rotate(360deg) scaleX(1);
+  }
 }  */
