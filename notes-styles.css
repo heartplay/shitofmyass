@@ -18,7 +18,6 @@ input {
   border-radius: 10px;
   height: 50%;
   font-size: 16px;
-
 }
 
 .btn-create {
@@ -26,6 +25,10 @@ input {
   height: 50%;
   border-radius: 10px;
   font-size: 16px;
+}
+
+.btn-create:hover {
+  background-color: rgb(82, 82, 185);
 }
 
 .notes-list {
@@ -39,10 +42,7 @@ input {
   padding: 0;
 }
 
-
-
 .note {
-  
   font-size: 20px;
   display: flex;
   border-bottom: 1px solid red;
